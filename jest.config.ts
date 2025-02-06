@@ -8,10 +8,8 @@ const config: Config = {
   },
   setupFilesAfterEnv: ["<rootDir>/jest.setup.ts"],
   transform: {
-    "^.+\\.(ts|tsx|js|jsx)$": [
-      "babel-jest",
-      { presets: ["@babel/preset-env", "@babel/preset-react", "@babel/preset-typescript"] },
-    ],
+    // Babel로 JavaScript와 TypeScript를 트랜스파일링
+    "^.+\\.(js|jsx|ts|tsx)$": "babel-jest",
   },
   transformIgnorePatterns: ["/node_modules/"],
 };
